@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import {Container, Form, Button} from "react-bootstrap"
 
-export default function Signin(props) {
-
+export default function Signinn(props) {
     const [newUser, setNewUser] = useState({});
 
     const ChangeHandler = (e) => {
@@ -17,8 +16,9 @@ export default function Signin(props) {
     }
 
   return (
-    <div>
-        <h1>Sign In</h1>
+    <div >
+
+        <h1 className='signin'>Sign In</h1>
 
         <Container>
             <Form.Group>
@@ -31,7 +31,7 @@ export default function Signin(props) {
                 <Form.Control name="password" type="password" onChange={ChangeHandler} />
             </Form.Group>
 
-            <Button variant="primary" onClick={loginHandler}>
+            <Button variant="primary" onClick={loginHandler} id='signbtn'>
                 Login
             </Button>
 

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import {Container, Form, Button} from "react-bootstrap"
 
-export default function Signup(props) {
-
+export default function Signupp(props) {
     const [newUser, setNewUser] = useState({});
 
     const ChangeHandler = (e) => {
