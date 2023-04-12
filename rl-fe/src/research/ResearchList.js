@@ -145,9 +145,6 @@ export default function ResearchList() {
 
   return (
     <div>
-        <div id='infoo'>
-
-        </div>
         <div>
             <table className='ttable'>
                 <tbody>

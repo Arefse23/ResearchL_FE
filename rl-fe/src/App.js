@@ -58,7 +58,8 @@ export default function App() {
     Axios.post("auth/signup", user)
     .then(res => {
       console.log(res)
-      window.location.href = '/signin'
+      // window.location.href = '/signin'
+      navigate('/signin')
     })
     .catch(err => {
       console.log(err)
@@ -77,6 +78,7 @@ export default function App() {
     .then(res => {
         console.log("Research Added Successfully!!!")
         loadResearchList();
+        // navigate('/index')
     })
     .catch(err => {
         console.log("Error Adding Research")
@@ -191,11 +193,12 @@ const researchDetail = (id) => {
                       Welcome in Research Library
                     </button>
                 
-              <Link to="/index"className='llink'><button id='but' class="btn btn-outline-success right" type="button">Researches</button></Link> &nbsp;
+            
               {
                 isAuth?
                   (
                     <>
+                    <Link to="/index"className='llink'><button id='but' class="btn btn-outline-success right" type="button">Researches</button></Link> &nbsp;
                     <Link to="/createresearch" onClick={''}className='llink'>
                     <button class="btn btn-outline-primary" type="button">
                       Create Research
@@ -212,7 +215,7 @@ const researchDetail = (id) => {
                   :(
                     <>
                       <Link to="/signup" className='llink'>
-                      <button class="btn btn-outline-primary" type="button">
+                      <button class="btn btn-outline-primary" type="button" id='appsignup'>
                         Signup
                       </button>
                       </Link> &nbsp;

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Container, Form, Button, Nav} from "react-bootstrap"
+import {BsFileEarmarkText} from 'react-icons/bs';
 
 export default function ResearchDetail(props) {
   const [research, setResearch] = useState(props.research)
@@ -15,43 +16,47 @@ export default function ResearchDetail(props) {
     setResearch(updatedResearch)
   }
 
+  let date = new Date(research.dateofpublish)
+
+
   return (
-    <div>
+    <div id='mainedit'>
+     <div className='editlabel' id='rest'><BsFileEarmarkText size='2.5em' className='pen'/><h1 className='penh1'>Research Detail</h1></div>
       <Container>
             <Form.Group>
-                <Form.Label id='rest'>Research Topic</Form.Label>
+                <Form.Label id='rest' className='formlabel'>Research Topic</Form.Label>
                 <Form.Control name="researchSubject"  value={research.researchSubject} onChange={handleChange} readOnly/>
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Author</Form.Label>
+                <Form.Label className='formlabel'>Author</Form.Label>
                 <Form.Control name="author"  value={research.author} onChange={handleChange} readOnly/>
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Date of Publish</Form.Label>
-                <Form.Control name="dateofpublish"  value={research.dateofpublish} onChange={handleChange} readOnly/>
+                <Form.Label className='formlabel'>Date of Publish</Form.Label>
+                <Form.Control name="dateofpublish"  value={date.toLocaleDateString()} onChange={handleChange} readOnly/>
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Research Introduction</Form.Label>
+                <Form.Label className='formlabel'>Research Introduction</Form.Label>
                 <Form.Control as="textarea" rows={3} name="researchIntro"  value={research.researchIntro} onChange={handleChange} readOnly/>
             </Form.Group>
 
             <Form.Group>
-                <Form.Label id='rest'>Type of Research</Form.Label>
+                <Form.Label className='formlabel'>Type of Research</Form.Label>
                 <Form.Control name="categories"  value={research.categories} onChange={handleChange} readOnly/>
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Research Link</Form.Label>
+                <Form.Label className='formlabel'>Research Link</Form.Label>
                 
                 <Form name="researchlink" onChange={handleChange} value={research.researchlink} readOnly/>
             </Form.Group>
 
             <Nav.Item>
-            <Nav.Link href={research.researchlink} name='researchlink' onChange={handleChange} className='naavv'>
-            <Button>{research.researchlink}</Button></Nav.Link>
+            <Nav.Link target="_blank" href={research.researchlink} name='researchlink' onChange={handleChange} className='naavv'>
+            <Button>Get Link</Button></Nav.Link>
             </Nav.Item>
             
 
