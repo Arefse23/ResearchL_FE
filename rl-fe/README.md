@@ -29,17 +29,17 @@ RL is website to share any kind of Researches with simple effective UI. User can
 * JWT authentication: used to make authentication function between frontend and backend.
 
 >## Erd
-![](https://i.imgur.com/jsDRrMw.png)
+![](https://i.imgur.com/O0PqYQq.png)
 
 >## Wireframe
 * ### Signin page
-![](https://i.imgur.com/abKVEiR.png)
+![](https://i.imgur.com/jr1XQ3q.png)
 * ### Signup page
-![](https://i.imgur.com/IoARYhq.png)
+![](https://i.imgur.com/NuouCfV.png)
 * ### Main page after Login
-![](https://i.imgur.com/6x826T0.png)
+![](https://i.imgur.com/frMbKgu.png)
 * ### Create Research page
-![](https://i.imgur.com/81RJB6C.png)
+![](https://i.imgur.com/flU0BAZ.png)
 * ### Research Detail page
 ![](https://i.imgur.com/R2a4J5H.png)
 * ### Edit Research page
