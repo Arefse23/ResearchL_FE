@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {Container, Form, Button} from "react-bootstrap"
+import {BsFillSignpostFill} from 'react-icons/bs';
 
 export default function Signinn(props) {
     const [newUser, setNewUser] = useState({});
@@ -16,18 +17,17 @@ export default function Signinn(props) {
     }
 
   return (
-    <div >
-
-        <h1 className='signin'>Sign In</h1>
+    <div id='signm'>
+        <div className='editlabel' id='rest'><BsFillSignpostFill size='2.5em' className='pen'/><h1 className='penh1'>Sign In</h1></div>
 
         <Container>
             <Form.Group>
-                <Form.Label>Email Address</Form.Label>
+                <Form.Label className='formlabel'>Email Address</Form.Label>
                 <Form.Control name="emailAddress" onChange={ChangeHandler} />
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Password</Form.Label>
+                <Form.Label className='formlabel'>Password</Form.Label>
                 <Form.Control name="password" type="password" onChange={ChangeHandler} />
             </Form.Group>
 

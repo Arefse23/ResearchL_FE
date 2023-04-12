@@ -59,8 +59,8 @@ export default function ResearchEditForm(props) {
             </Form.Select>
 
 
-            <Form.Group className='formlabel'>
-                <Form.Label>Research Link</Form.Label>
+            <Form.Group>
+                <Form.Label className='formlabel'>Research Link</Form.Label>
                 <Form.Control name="researchlink" onChange={handleChange} value={research.researchlink} />
             </Form.Group>
 

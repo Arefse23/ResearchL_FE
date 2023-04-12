@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Container, Form, Button} from "react-bootstrap"
+import {BsFileEarmarkPlus} from 'react-icons/bs';
 
 export default function ResearchCreateForm(props) {
 
@@ -24,32 +25,32 @@ export default function ResearchCreateForm(props) {
   }
 
   return (
-    <div>
-    <h1>Create Research</h1>
+    <div id='mainedit'> 
+    <div className='editlabel' id='rest'><BsFileEarmarkPlus size='2.5em' className='pen'/><h1 className='penh1'>Create Research</h1></div>
 
 
     <Container>
             <Form.Group>
-                <Form.Label>Research Topic</Form.Label>
+                <Form.Label className='formlabel'>Research Topic</Form.Label>
                 <Form.Control name="researchSubject" onChange={handleChange} />
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Author</Form.Label>
+                <Form.Label className='formlabel'>Author</Form.Label>
                 <Form.Control name="author" onChange={handleChange} />
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Date of Publish</Form.Label>
+                <Form.Label className='formlabel'>Date of Publish</Form.Label>
                 <Form.Control type='date' name="dateofpublish" onChange={handleChange} />
             </Form.Group>
 
             <Form.Group>
-                <Form.Label>Research Introduction</Form.Label>
+                <Form.Label className='formlabel'>Research Introduction</Form.Label>
                 <Form.Control as="textarea" rows={3} name="researchIntro" onChange={handleChange} />
             </Form.Group>
 
-            <Form.Label>Type of Research</Form.Label>
+            <Form.Label className='formlabel'>Type of Research</Form.Label>
             <Form.Select name="categories" onChange={handleChange}>
             <option> select Type of Research </option>
                 <option value="Descriptive Research">Descriptive Research</option>
@@ -59,7 +60,7 @@ export default function ResearchCreateForm(props) {
             </Form.Select>
 
             <Form.Group>
-                <Form.Label>Research Link</Form.Label>
+                <Form.Label className='formlabel'>Research Link</Form.Label>
                 <Form.Control name="researchlink" onChange={handleChange} />
             </Form.Group>
 
