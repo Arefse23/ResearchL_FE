@@ -9,15 +9,15 @@ RL is website to share any kind of Researches with simple effective UI. User can
 * ### Signin page
 ![](https://i.imgur.com/1OgRKGp.png)
 * ### Signup page
-![](https://i.imgur.com/fA6ch7c.png)
+![](https://i.imgur.com/uhdhbnc.png)
 * ### Main page after Login
-![](https://i.imgur.com/W1naJlT.png)
+![](https://i.imgur.com/IiyVvGA.png)
 * ### Create Research page
-![](https://i.imgur.com/TZjpPat.png)
+![](https://i.imgur.com/mAiM1Vr.png)
 * ### Research Detail page
-![](https://i.imgur.com/J9t1Emh.png)
+![](https://i.imgur.com/iRrwbiu.png)
 * ### Edit Research page
-![](https://i.imgur.com/QO4jHNd.png)
+![](https://i.imgur.com/mSxd3Og.png)
 
 
 >## Technologies Used
