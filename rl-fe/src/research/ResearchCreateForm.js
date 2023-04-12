@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Container, Form, Button} from "react-bootstrap"
 
 export default function ResearchCreateForm(props) {
 
@@ -18,47 +19,56 @@ export default function ResearchCreateForm(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.addResearch(newResearch);
+    window.location.href = '/index'
+    
   }
 
   return (
     <div>
     <h1>Create Research</h1>
 
-    <form onSubmit={handleSubmit}>
-        <div>
-            <label>Research Topic</label>
-            <input type="text" name="researchSubject" onChange={handleChange}></input>
-        </div>
 
-        <div>
-            <label>Author</label>
-            <input type="text" name="author" onChange={handleChange}></input>
-        </div>
+    <Container>
+            <Form.Group>
+                <Form.Label>Research Topic</Form.Label>
+                <Form.Control name="researchSubject" onChange={handleChange} />
+            </Form.Group>
 
-        <div>
-            <label>Date of Publish</label>
-            <input type="date" name="dateofpublish" onChange={handleChange}></input>
-        </div>
+            <Form.Group>
+                <Form.Label>Author</Form.Label>
+                <Form.Control name="author" onChange={handleChange} />
+            </Form.Group>
 
-        <div>
-            <label>Research Introduction</label>
-            <textarea name="researchIntro" onChange={handleChange}></textarea>
-        </div>
+            <Form.Group>
+                <Form.Label>Date of Publish</Form.Label>
+                <Form.Control type='date' name="dateofpublish" onChange={handleChange} />
+            </Form.Group>
 
-        <div>
-            <label>Type of Research</label>
-            <select name="categories" onChange={handleChange}>
-                <option>Descriptive Research</option>
-                <option>Experimental Research</option>
-                <option>Exploratory Research</option>
-                <option>Historical Research</option>
-            </select>
-        </div>
+            <Form.Group>
+                <Form.Label>Research Introduction</Form.Label>
+                <Form.Control as="textarea" rows={3} name="researchIntro" onChange={handleChange} />
+            </Form.Group>
 
-        <div>
-            <input type="submit" value="Add Research" ></input>
-        </div>
-    </form>
+            <Form.Label>Type of Research</Form.Label>
+            <Form.Select name="categories" onChange={handleChange}>
+            <option> select Type of Research </option>
+                <option value="Descriptive Research">Descriptive Research</option>
+                <option value="Experimental Research">Experimental Research</option>
+                <option value="Exploratory Research">Exploratory Research</option>
+                <option value="Historical Research">Historical Research</option>
+            </Form.Select>
+
+            <Form.Group>
+                <Form.Label>Research Link</Form.Label>
+                <Form.Control name="researchlink" onChange={handleChange} />
+            </Form.Group>
+
+            <Button variant="primary" onClick={handleSubmit} type='submit' id='signbtn'>
+            Add Research
+            </Button>
+            
+    </Container>
+
 </div>
   )
 }

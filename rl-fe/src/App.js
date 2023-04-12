@@ -156,7 +156,8 @@ const researchDetail = (id) => {
         let user = jwt_decode(token);
         setIsAuth(true)
         setUser(user)
-        window.location.href = '/'
+        // window.location.href = '/'
+        navigate('/')
       }
     })
     .catch(err => {
@@ -176,13 +177,16 @@ const researchDetail = (id) => {
   return (
     <div>
           <div>
-          <nav class="navbar navbar-dark bg-dark">
+          <nav class="navbar navbar-dark bg-dark" id='navvv'>
               
               <div className='subnav'>
-                <button class="btn btn-success" type="button" id='logo'>
+                  <Link to='/'>
+                    <button class="btn btn-success" type="button" id='logo'>
                       RL
                     </button>
-                    <Link to='/'><h3>Research Library</h3></Link>
+                    <h3>Research Library</h3>
+                  </Link>
+
                     <button class="btn btn-light" type="button" id='greet'>
                       Welcome in Research Library
                     </button>

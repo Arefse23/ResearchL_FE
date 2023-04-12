@@ -1,6 +1,6 @@
 body{
   
-  background-color: aliceblue;
+  background-color: rgb(208, 210, 213);
 }
 
 .but{
@@ -76,5 +76,78 @@ h3{
 }
 
 #signbtn{
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-left: 500px;
+  margin-bottom: 100px;
 }
+
+/* Sign Up */
+#signupbtn{
+  margin-top: 15px;
+  margin-left: 500px;
+  margin-bottom: 20px;
+}
+
+#signuptitle{
+  margin-left: 120px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+/*=========================== Info Div======================  */
+#infoo{
+  border: 2px solid black;
+}
+
+
+
+
+/* Research Table */
+
+
+.naavv{
+  padding: 0;
+  border: 2px solid black;
+  width: 600px;
+}
+
+.ttable{
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.ttable tr{
+  text-align: center;
+ 
+}
+
+.ttable td{
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.412);
+}
+
+.ttable th{
+  text-align: center;
+  
+  background-color: rgb(32, 32, 44);
+  color: aliceblue;
+}
+
+#edit{
+  width: 50px;
+  height: 50px;
+  color: black;
+}
+
+/* =====================================Icons======================= */
+
+#BsPencil{
+  padding: 3px;
+}
+
+
+

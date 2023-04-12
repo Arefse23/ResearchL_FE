@@ -3,11 +3,13 @@ import Axios from 'axios'
 import Research from './Research';
 import ResearchCreateForm from './ResearchCreateForm';
 import ResearchEditForm from './ResearchEditForm';
+import ResearchDetail from './ResearchDetail';
 
 export default function ResearchList() {
 
     const [researchs, setResearchs] = useState([]);
     const [isEdit, setIsEdit] = useState(false);
+    const [isRead, setIsRead] = useState(false); 
     const [currentResearch, setCurrentResearch] = useState("");
 
     useEffect(() => {
@@ -30,6 +32,7 @@ export default function ResearchList() {
 
 
     const editView = (id) => {
+        setIsRead(false)
         console.log(id)
         Axios.get(`research/edit?id=${id}`,
         {
@@ -52,6 +55,8 @@ export default function ResearchList() {
     }
 
     const researchDetail = (id) => {
+        setIsEdit(false)
+        // console.log(currentResearch)
         console.log(id)
         Axios.get(`research/detail?id=${id}`,
         {
@@ -64,8 +69,9 @@ export default function ResearchList() {
             console.log(res.data.research)
             let research = res.data.research
             console.log("Loaded Research Detail Information")
-            
+            setIsRead(true)
             setCurrentResearch(research)
+            
         })
         .catch(err => {
             console.log("Error Loading Research Detail Information")
@@ -132,20 +138,28 @@ export default function ResearchList() {
 
 
     const allresearchs = researchs.map((research, index) => (
-        <tr key={index}>
+        <tr key={index} id='trh'>
             <Research {...research} editView={editView} deleteResearch={deleteResearch} researchDetail={researchDetail}/>
         </tr>
     ))
 
   return (
     <div>
+        <div id='infoo'>
+
+        </div>
         <div>
-            <table>
+            <table className='ttable'>
                 <tbody>
-                    <tr>
-                        <th>Topic</th> &nbsp;
-                        <th>Author</th> &nbsp;
-                        <th>Category</th> &nbsp;
+                    <tr id='trf'>
+                        <th id='trz'>Topic</th> 
+                        <th>Author</th> 
+                        <th>Type of Research</th> 
+                        <th>Date of Publish</th> 
+                        <th>Edit</th> 
+                        <th>Detail</th> 
+                        <th>Delete</th> 
+                        
                         
                     </tr>
                     {allresearchs}
@@ -153,10 +167,17 @@ export default function ResearchList() {
             </table>
         </div>
         {(!isEdit) ?
-        console.log()// <ResearchCreateForm addResearch={addResearch}/>
+        console.log()
             :
-        <ResearchEditForm key={currentResearch._id} research={currentResearch} editResearch={editResearch}/>
+             <ResearchEditForm key={currentResearch._id} research={currentResearch} editResearch={editResearch}/>
         }
+
+
+      
+        {(!isRead)?
+        console.log():
+         <ResearchDetail key={currentResearch._id} research={currentResearch} researchDetail={researchDetail}/> }
+
     </div>
   )
 }

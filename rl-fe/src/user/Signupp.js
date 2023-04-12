@@ -17,7 +17,7 @@ export default function Signupp(props) {
 
   return (
     <div>
-        <h1>Sign Up</h1>
+        <h1 id='signuptitle'>Sign Up</h1>
 
         <Container>
             <Form.Group>
@@ -40,7 +40,7 @@ export default function Signupp(props) {
                 <Form.Control name="password" type="password" onChange={ChangeHandler} />
             </Form.Group>
 
-            <Button variant="primary" onClick={registerHandler}>
+            <Button variant="primary" onClick={registerHandler} id='signupbtn'>
                 Register
             </Button>
 
