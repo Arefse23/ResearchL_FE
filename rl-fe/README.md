@@ -5,7 +5,7 @@ RL is website to share any kind of Researches with simple effective UI. User can
 ```
 >## Screenshots:
 * ### Main page before Login
-![](https://i.imgur.com/MCqdTw2.png)
+![]([https://i.imgur.com/MCqdTw2.png](https://i.imgur.com/4p7IpRl.png))
 * ### Signin page
 ![](https://i.imgur.com/ue72R5t.png)
 * ### Signup page
